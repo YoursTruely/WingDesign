@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wing Design Tool</title>
+        <script src="script.js"></script>
+         
+    </head>
+
+    <body>
+        <h2>Towed-ROV wing design tool</h2>
+        <form onsubmit="Calculate();return false" onreset="resetData()" name="myForm">
+            <label for="maxSpeed">Max. tow speed (in m/s):</label>
+            <input type="text" id="maxSpeed" name="maxSpeed"><br>
+            <p></p>
+            <label for="span">Wing Span (in m):</label>
+            <input type="text" id="span" name="span">
+            <p>(Enter wing dimension in the direction perpendicular to the flow)</p><br>
+            <label for="chord">Wing chord (in m):</label>
+            <input type="text" id="chord" name="chord">
+            <p>(Enter wing dimension in the direction of flow)</p><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+        <p>Max. lift force : <span id="Force"></span></p>
+        <p>Stall angle : <span id="stall"></span></p>
+        <p>Optimum wing axis location : <span id="axis"></span></p>
+        <p>Max. torque on shaft : <span id="Torque"></span></p>
+        <hr>
+        <h2>References:</h2>
+        <p>1. Torres, G. E., &amp; Mueller, T. J. (2004). Low-Aspect-Ratio Wing Aerodynamics at Low Reynolds Numbers. AIAA Journal, 42(5), 865–873.</p>
+
+    </body>
+</html>
